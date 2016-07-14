@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cookbook  xmlns="http://rovio.com/mourya.xsd">
+<cookbookTitle> Angry Birds Bad Piggies Egg Recipes </cookbookTitle>
+	
+	<author> Bonnier Kirjat Oy </author>
+	<recipe id="R1">
+	
+	<recipeName> Grilled Delight </recipeName> 
+	
+		<serves>four bad piggies</serves>
+		
+		<summary> grilled eggs </summary>
+	
+		<ingredients>
+			<eggs>10</eggs> 
+		</ingredients> 
+		
+		<instruction id="R1I1"> Fire up an outdoor grill (outdoors, please) </instruction> 
+		<instruction id="R1I2"> Use a muffin pan: coat all cups with cooking spray and break one egg per cup. Try to keep the eggs intact for a nice presentation </instruction> 
+		<instruction id="R1I3"> Place the pan on grill and cook for 2-3 minutes over medium heat. </instruction> 
+		<instruction id="R1I4"> Serve with mixed vegetables/salad. </instruction> 
+	
+	</recipe>
+<recipe id="R2">
+	<recipeName> Oven Eggs </recipeName>
+
+		<serves>two piggies</serves>
+		
+		<summary> oven eggs </summary>
+		
+		<ingredients>
+			<eggs>2</eggs>
+			<cream> 2 teaspoons </cream>
+			<mincedChives> 1 teaspoon </mincedChives>
+			<salt />
+			<pepper />
+			<gratedCheese />
+			<butter />
+		</ingredients> 
+				
+		<instruction id="R2I1"> Preheat the oven to 325 F. Grease the inside of a ramekin with some butter. Pour the cream on the bottom of the ramekin </instruction> 
+		<instruction id="R2I2"> Break the eggs on top of the cream without damaging the yolks. Add salt, pepper, chives and grated cheese. 
+						  Bake for 12-15 minutes or until the whites have set (the yolks are still soft). Remove from oven and allow to set for 2-3 minutes befor serving. 
+		</instruction>
+	</recipe>
+</cookbook>

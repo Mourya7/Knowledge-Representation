@@ -1,0 +1,19 @@
+<!ELEMENT cookbook (cookbookTitle?, author?, recipe+)>
+<!ELEMENT recipe (recipeName?, serves?, summary?, ingredients?, instruction+)>
+<!ELEMENT ingredients (eggs*, cream*, mincedChives*, salt*, pepper*, gratedCheese*, butter*)>
+<!ELEMENT cookbookTitle (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT recipeName (#PCDATA)>
+<!ELEMENT serves (#PCDATA)>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT eggs (#PCDATA)>
+<!ELEMENT instruction (#PCDATA)>
+<!ELEMENT cream (#PCDATA)>
+<!ELEMENT mincedChives (#PCDATA)>
+<!ELEMENT salt (#PCDATA)>
+<!ELEMENT pepper (#PCDATA)>
+<!ELEMENT gratedCheese (#PCDATA)>
+<!ELEMENT butter (#PCDATA)>
+
+<!ATTLIST recipe id ID #REQUIRED>
+<!ATTLIST instruction id ID #REQUIRED>

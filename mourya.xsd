@@ -1,0 +1,57 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://rovio.com/mourya.xsd" 
+xmlns="http://rovio.com/mourya.xsd" elementFormDefault="qualified">
+
+<xs:element name="cookbook" type="cookbookType"/>
+<xs:complexType name="cookbookType">
+	<xs:sequence>
+	   <xs:element name="cookbookTitle" type="xs:string"/>
+	   <xs:element name="author" type="xs:string"/>
+	   <xs:element name="recipe" type="recipeInformation" minOccurs="1" maxOccurs="30"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="recipeInformation">
+	<xs:sequence>
+		<xs:element name="recipeName" minOccurs="0" maxOccurs="1" type="xs:string"/>
+		<xs:element name="serves" minOccurs="0" maxOccurs="1" type="xs:string"/>
+		<xs:element name="summary" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+		<xs:element name="ingredients">
+			<xs:complexType>
+				<xs:group ref="ingredientsGroup"/>
+			</xs:complexType>
+		</xs:element>
+   		<xs:element name="instruction" minOccurs="1" maxOccurs="unbounded">
+			<xs:complexType>
+    				<xs:simpleContent>
+      					<xs:extension base="xs:string">
+        					<xs:attribute name="id" type="xs:ID" />
+      					</xs:extension>
+    				</xs:simpleContent>
+  			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+<xs:attribute name="id" type="xs:ID"/>
+</xs:complexType>
+
+<xs:group name="ingredientsGroup">
+	<xs:sequence>
+		<xs:element name="eggs" type="xs:int" minOccurs="0" maxOccurs="1"/>
+   		<xs:element name="cream" type="amountInTeaspoons" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="mincedChives" minOccurs="0" maxOccurs="1" type="amountInTeaspoons"/>
+		<xs:element name="salt" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="pepper" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="gratedCheese" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="butter" type="xs:string" minOccurs="0" maxOccurs="1"/>
+
+	</xs:sequence>
+</xs:group>
+
+<xs:simpleType name="amountInTeaspoons">
+	<xs:restriction base="xs:string">
+		<xs:whiteSpace value="collapse"/>
+		<xs:minLength value="10"/>
+		<xs:maxLength value="11"/>
+		<xs:pattern value="[2-9] teaspoons|[1] teaspoon"/>
+	</xs:restriction>
+</xs:simpleType>
+</xs:schema>
